@@ -105,12 +105,6 @@ namespace UI
                 else
                 {   
                     _bllUsuario.ObtenerPermisosUsuario(user);
-
-                    //if (!_bllUsuario.EsValidoDV())
-                    //{
-                    //    MessageBox.Show("La BBDD a sido modificada sin permiso");
-                    //    return;
-                    //}
                 }
 
                 // Iniciamos sesión

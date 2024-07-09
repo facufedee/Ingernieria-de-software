@@ -9,6 +9,7 @@ using System.Configuration;
 using System.Collections;
 using System.Xml.Linq;
 using BE;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace DAL
 {
@@ -862,6 +863,10 @@ namespace DAL
                 {
                     oCommand.CommandType = CommandType.StoredProcedure;
                     oCommand.Parameters.AddWithValue("@tag", palabra.Tag);
+                    if (palabra.Texto == null)
+                    {
+                        palabra.Texto = ""; // 
+                    }
                     oCommand.Parameters.AddWithValue("@texto", palabra.Texto);
                     oCommand.Parameters.AddWithValue("@idIdioma", idIdioma);
                     oConexionDB.Open();
@@ -901,19 +906,22 @@ namespace DAL
                 oConexionDB.Close();
             }
         }
-
-        public void ModificarPalabra(BEPalabra palabra)
+        public void ModificarPalabras(List<BEPalabra> palabras)
         {
             try
             {
-                using (SqlCommand oCommand = new SqlCommand("Sp_Palabra_Modificar", oConexionDB))
-                {
-                    oCommand.CommandType = CommandType.StoredProcedure;
-                    oCommand.Parameters.AddWithValue("@idPalabra", palabra.Id);
-                    oCommand.Parameters.AddWithValue("@texto", palabra.Texto);
-                    oConexionDB.Open();
+                oConexionDB.Open();
 
-                    oCommand.ExecuteNonQuery();
+                foreach (BEPalabra palabra in palabras)
+                {
+                    using (SqlCommand oCommand = new SqlCommand("Sp_Palabra_Modificar", oConexionDB))
+                    {
+                        oCommand.CommandType = CommandType.StoredProcedure;
+                        oCommand.Parameters.AddWithValue("@idPalabra", palabra.Id);
+                        oCommand.Parameters.AddWithValue("@texto", palabra.Texto);
+
+                        oCommand.ExecuteNonQuery();
+                    }
                 }
             }
             catch (SqlException excepcion)
@@ -925,6 +933,30 @@ namespace DAL
                 oConexionDB.Close();
             }
         }
+
+        //public void ModificarPalabra(BEPalabra palabra)
+        //{
+        //    try
+        //    {
+        //        using (SqlCommand oCommand = new SqlCommand("Sp_Palabra_Modificar", oConexionDB))
+        //        {
+        //            oCommand.CommandType = CommandType.StoredProcedure;
+        //            oCommand.Parameters.AddWithValue("@idPalabra", palabra.Id);
+        //            oCommand.Parameters.AddWithValue("@texto", palabra.Texto);
+        //            oConexionDB.Open();
+
+        //            oCommand.ExecuteNonQuery();
+        //        }
+        //    }
+        //    catch (SqlException excepcion)
+        //    {
+        //        throw excepcion;
+        //    }
+        //    finally
+        //    {
+        //        oConexionDB.Close();
+        //    }
+        //}
 
         public static bool ValidarDV(string dVVCalculado)
         {

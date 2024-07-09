@@ -91,3 +91,4 @@ C:\Users\facun\OneDrive\Escritorio\UAI\Entrega_Final_IS\PFM.UI\obj\Debug\UI.Prop
 C:\Users\facun\OneDrive\Escritorio\UAI\Entrega_Final_IS\PFM.UI\obj\Debug\PFM.UI.csproj.GenerateResource.cache
 C:\Users\facun\OneDrive\Escritorio\UAI\Entrega_Final_IS\PFM.UI\obj\Debug\PFM.UI.csproj.CoreCompileInputs.cache
 C:\Users\facun\OneDrive\Escritorio\UAI\Entrega_Final_IS\PFM.UI\obj\Debug\PFM.UI.csproj.Up2Date
+C:\Users\facun\OneDrive\Escritorio\UAI\Entrega_Final_IS\PFM.UI\obj\Debug\UI.frmLogin.resources

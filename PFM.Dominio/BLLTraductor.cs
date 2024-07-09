@@ -98,12 +98,11 @@ namespace BLL
             }
         }
 
-        public void ModificarIdioma(BEIdioma idioma)
+        public void ModificarIdioma(List<BEPalabra> Palabras)
         {
-            foreach (BEPalabra Palabra in idioma.Palabras)
-            {
-                accesoDatos.ModificarPalabra(Palabra);
-            }
+
+                accesoDatos.ModificarPalabras(Palabras);
+            
         }
     }
 }

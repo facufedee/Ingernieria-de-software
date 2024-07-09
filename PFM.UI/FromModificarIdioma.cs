@@ -52,11 +52,13 @@ namespace UI
         private void metroButton1_Click_1(object sender, EventArgs e)
         {
             List<BEPalabra> Palabras = (List<BEPalabra>)dataGridView1.DataSource;
-            IdiomaSeleccionado.Palabras = Palabras;
 
             BLLTraductor bllTraductor = new BLLTraductor();
-            bllTraductor.ModificarIdioma(IdiomaSeleccionado);
-            EvIdioma();
+            bllTraductor.ModificarIdioma(Palabras);
+            //EvIdioma();
+            Actualizar();
+            CargarIdiomas();
+            CargarPalabras();
         }
 
 

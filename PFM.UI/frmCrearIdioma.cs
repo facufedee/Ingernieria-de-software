@@ -65,10 +65,12 @@ namespace UI
             }
             bllTraductor.AgregarIdioma(Idioma);
 
-            EvIdioma();
+            //EvIdioma();
 
             CargarTags();
             metroTextBox1.Clear();
+            MessageBox.Show("El idioma ha sido cargado con exito");
+
         }
 
         public void Registrarse()
