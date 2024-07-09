@@ -65,3 +65,29 @@ C:\Users\facun\OneDrive\Escritorio\UAI\Ingenieria de software\00_Actualizado\Pro
 C:\Users\facun\OneDrive\Escritorio\UAI\Entrega_Final_IS\PFM.UI\obj\Debug\PFM.UI.csproj.AssemblyReference.cache
 C:\Users\facun\OneDrive\Escritorio\UAI\Entrega_Final_IS\PFM.UI\obj\Debug\UI.exe
 C:\Users\facun\OneDrive\Escritorio\UAI\Entrega_Final_IS\PFM.UI\obj\Debug\UI.pdb
+C:\Users\facun\OneDrive\Escritorio\UAI\Entrega_Final_IS\PFM.UI\bin\Debug\UI.exe.config
+C:\Users\facun\OneDrive\Escritorio\UAI\Entrega_Final_IS\PFM.UI\bin\Debug\UI.exe
+C:\Users\facun\OneDrive\Escritorio\UAI\Entrega_Final_IS\PFM.UI\bin\Debug\UI.pdb
+C:\Users\facun\OneDrive\Escritorio\UAI\Entrega_Final_IS\PFM.UI\bin\Debug\ABS TRACCION.dll
+C:\Users\facun\OneDrive\Escritorio\UAI\Entrega_Final_IS\PFM.UI\bin\Debug\BE.dll
+C:\Users\facun\OneDrive\Escritorio\UAI\Entrega_Final_IS\PFM.UI\bin\Debug\BLL.dll
+C:\Users\facun\OneDrive\Escritorio\UAI\Entrega_Final_IS\PFM.UI\bin\Debug\FRAMEWORK.dll
+C:\Users\facun\OneDrive\Escritorio\UAI\Entrega_Final_IS\PFM.UI\bin\Debug\Microsoft.VisualBasic.PowerPacks.Vs.dll
+C:\Users\facun\OneDrive\Escritorio\UAI\Entrega_Final_IS\PFM.UI\bin\Debug\DA L.dll
+C:\Users\facun\OneDrive\Escritorio\UAI\Entrega_Final_IS\PFM.UI\bin\Debug\ABS TRACCION.pdb
+C:\Users\facun\OneDrive\Escritorio\UAI\Entrega_Final_IS\PFM.UI\bin\Debug\BE.pdb
+C:\Users\facun\OneDrive\Escritorio\UAI\Entrega_Final_IS\PFM.UI\bin\Debug\BLL.pdb
+C:\Users\facun\OneDrive\Escritorio\UAI\Entrega_Final_IS\PFM.UI\bin\Debug\FRAMEWORK.pdb
+C:\Users\facun\OneDrive\Escritorio\UAI\Entrega_Final_IS\PFM.UI\bin\Debug\DA L.pdb
+C:\Users\facun\OneDrive\Escritorio\UAI\Entrega_Final_IS\PFM.UI\obj\Debug\UI.frmMDI.resources
+C:\Users\facun\OneDrive\Escritorio\UAI\Entrega_Final_IS\PFM.UI\obj\Debug\UI.frmAltaUsuario.resources
+C:\Users\facun\OneDrive\Escritorio\UAI\Entrega_Final_IS\PFM.UI\obj\Debug\UI.frmGestionUser.resources
+C:\Users\facun\OneDrive\Escritorio\UAI\Entrega_Final_IS\PFM.UI\obj\Debug\UI.FrmModificarUsuario.resources
+C:\Users\facun\OneDrive\Escritorio\UAI\Entrega_Final_IS\PFM.UI\obj\Debug\UI.FrmPerfiles.resources
+C:\Users\facun\OneDrive\Escritorio\UAI\Entrega_Final_IS\PFM.UI\obj\Debug\UI.frmPermisos.resources
+C:\Users\facun\OneDrive\Escritorio\UAI\Entrega_Final_IS\PFM.UI\obj\Debug\UI.frmPermisosUsuarios.resources
+C:\Users\facun\OneDrive\Escritorio\UAI\Entrega_Final_IS\PFM.UI\obj\Debug\UI.FromModificarIdioma.resources
+C:\Users\facun\OneDrive\Escritorio\UAI\Entrega_Final_IS\PFM.UI\obj\Debug\UI.Properties.Resources.resources
+C:\Users\facun\OneDrive\Escritorio\UAI\Entrega_Final_IS\PFM.UI\obj\Debug\PFM.UI.csproj.GenerateResource.cache
+C:\Users\facun\OneDrive\Escritorio\UAI\Entrega_Final_IS\PFM.UI\obj\Debug\PFM.UI.csproj.CoreCompileInputs.cache
+C:\Users\facun\OneDrive\Escritorio\UAI\Entrega_Final_IS\PFM.UI\obj\Debug\PFM.UI.csproj.Up2Date
