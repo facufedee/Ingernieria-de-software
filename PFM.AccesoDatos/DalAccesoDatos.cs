@@ -864,6 +864,7 @@ namespace DAL
             Parametro.SqlDbType = SqlDbType.VarChar;
             ListaParametros.Add(Parametro);
 
+
             DalAccesoDatos accesoDatos = new DalAccesoDatos();
 
             return accesoDatos.VerificarExistenciaBaseDatos("Sp_Verif_Verificar", ListaParametros);

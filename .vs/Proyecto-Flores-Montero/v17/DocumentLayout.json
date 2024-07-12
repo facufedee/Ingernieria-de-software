@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\facun\\OneDrive\\Escritorio\\UAI\\Entrega_Final_IS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A9D1E984-279B-4F98-A3D3-B0BD72DFE72B}|PFM.UI\\PFM.UI.csproj|c:\\users\\facun\\onedrive\\escritorio\\uai\\entrega_final_is\\pfm.ui\\frmcrearidioma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A9D1E984-279B-4F98-A3D3-B0BD72DFE72B}|PFM.UI\\PFM.UI.csproj|solutionrelative:pfm.ui\\frmcrearidioma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{176C438E-2597-41AB-91D8-08885C8B0B70}|PFM.Aplicacion\\PFM.Aplicacion.csproj|c:\\users\\facun\\onedrive\\escritorio\\uai\\entrega_final_is\\pfm.aplicacion\\bepalabra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{176C438E-2597-41AB-91D8-08885C8B0B70}|PFM.Aplicacion\\PFM.Aplicacion.csproj|solutionrelative:pfm.aplicacion\\bepalabra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9D1E984-279B-4F98-A3D3-B0BD72DFE72B}|PFM.UI\\PFM.UI.csproj|c:\\users\\facun\\onedrive\\escritorio\\uai\\entrega_final_is\\pfm.ui\\frmmdi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9D1E984-279B-4F98-A3D3-B0BD72DFE72B}|PFM.UI\\PFM.UI.csproj|solutionrelative:pfm.ui\\frmmdi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9D1E984-279B-4F98-A3D3-B0BD72DFE72B}|PFM.UI\\PFM.UI.csproj|c:\\users\\facun\\onedrive\\escritorio\\uai\\entrega_final_is\\pfm.ui\\frmmdi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A9D1E984-279B-4F98-A3D3-B0BD72DFE72B}|PFM.UI\\PFM.UI.csproj|solutionrelative:pfm.ui\\frmmdi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A9D1E984-279B-4F98-A3D3-B0BD72DFE72B}|PFM.UI\\PFM.UI.csproj|c:\\users\\facun\\onedrive\\escritorio\\uai\\entrega_final_is\\pfm.ui\\frmcrearidioma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{A9D1E984-279B-4F98-A3D3-B0BD72DFE72B}|PFM.UI\\PFM.UI.csproj|solutionrelative:pfm.ui\\frmcrearidioma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E4E32BA-3F3F-4A6B-8C83-9F29E406378A}|PFM.AccesoDatos\\PFM.AccesoDatos.csproj|c:\\users\\facun\\onedrive\\escritorio\\uai\\entrega_final_is\\pfm.accesodatos\\dalaccesodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E4E32BA-3F3F-4A6B-8C83-9F29E406378A}|PFM.AccesoDatos\\PFM.AccesoDatos.csproj|solutionrelative:pfm.accesodatos\\dalaccesodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,50 +26,61 @@
       "DocumentGroups": [
         {
           "DockedHeight": 258,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DalAccesoDatos.cs",
-              "DocumentMoniker": "C:\\Users\\facun\\OneDrive\\Escritorio\\UAI\\Entrega_Final_IS\\PFM.AccesoDatos\\DalAccesoDatos.cs",
-              "RelativeDocumentMoniker": "PFM.AccesoDatos\\DalAccesoDatos.cs",
-              "ToolTip": "C:\\Users\\facun\\OneDrive\\Escritorio\\UAI\\Entrega_Final_IS\\PFM.AccesoDatos\\DalAccesoDatos.cs",
-              "RelativeToolTip": "PFM.AccesoDatos\\DalAccesoDatos.cs",
-              "ViewState": "AQIAAAkDAAAAAAAAAAAawBYDAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-09T21:30:38.588Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BEPalabra.cs",
+              "DocumentMoniker": "C:\\Users\\facun\\OneDrive\\Escritorio\\UAI\\Entrega_Final_IS\\PFM.Aplicacion\\BEPalabra.cs",
+              "RelativeDocumentMoniker": "PFM.Aplicacion\\BEPalabra.cs",
+              "ToolTip": "C:\\Users\\facun\\OneDrive\\Escritorio\\UAI\\Entrega_Final_IS\\PFM.Aplicacion\\BEPalabra.cs*",
+              "RelativeToolTip": "PFM.Aplicacion\\BEPalabra.cs*",
+              "ViewState": "AQIAABEAAAAAAAAAAAAnwB8AAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-12T01:18:33.644Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "frmMDI.cs",
+              "DocumentMoniker": "C:\\Users\\facun\\OneDrive\\Escritorio\\UAI\\Entrega_Final_IS\\PFM.UI\\frmMDI.cs",
+              "RelativeDocumentMoniker": "PFM.UI\\frmMDI.cs",
+              "ToolTip": "C:\\Users\\facun\\OneDrive\\Escritorio\\UAI\\Entrega_Final_IS\\PFM.UI\\frmMDI.cs",
+              "RelativeToolTip": "PFM.UI\\frmMDI.cs",
+              "ViewState": "AQIAAEAAAAAAAAAAAAAjwE4AAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-12T01:09:46.527Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmMDI.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\facun\\OneDrive\\Escritorio\\UAI\\Entrega_Final_IS\\PFM.UI\\frmMDI.cs",
+              "RelativeDocumentMoniker": "PFM.UI\\frmMDI.cs",
+              "ToolTip": "C:\\Users\\facun\\OneDrive\\Escritorio\\UAI\\Entrega_Final_IS\\PFM.UI\\frmMDI.cs [Design]",
+              "RelativeToolTip": "PFM.UI\\frmMDI.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-12T01:09:38.144Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "frmCrearIdioma.cs [Design]",
               "DocumentMoniker": "C:\\Users\\facun\\OneDrive\\Escritorio\\UAI\\Entrega_Final_IS\\PFM.UI\\frmCrearIdioma.cs",
               "RelativeDocumentMoniker": "PFM.UI\\frmCrearIdioma.cs",
               "ToolTip": "C:\\Users\\facun\\OneDrive\\Escritorio\\UAI\\Entrega_Final_IS\\PFM.UI\\frmCrearIdioma.cs [Design]",
               "RelativeToolTip": "PFM.UI\\frmCrearIdioma.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-09T22:48:48.378Z",
+              "WhenOpened": "2024-07-12T00:57:04.364Z",
               "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "frmCrearIdioma.cs",
-              "DocumentMoniker": "C:\\Users\\facun\\OneDrive\\Escritorio\\UAI\\Entrega_Final_IS\\PFM.UI\\frmCrearIdioma.cs",
-              "RelativeDocumentMoniker": "PFM.UI\\frmCrearIdioma.cs",
-              "ToolTip": "C:\\Users\\facun\\OneDrive\\Escritorio\\UAI\\Entrega_Final_IS\\PFM.UI\\frmCrearIdioma.cs",
-              "RelativeToolTip": "PFM.UI\\frmCrearIdioma.cs",
-              "ViewState": "AQIAADUAAAAAAAAAAAAswEQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-09T22:45:56.681Z",
-              "EditorCaption": ""
             }
           ]
         }
