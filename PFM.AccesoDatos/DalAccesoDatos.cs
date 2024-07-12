@@ -17,7 +17,6 @@ namespace DAL
     {
         DalAccesoDatos accesoDatos;
 
-        //Conexion con la base de datos 
         private SqlConnection oConexionDB = new SqlConnection(ConfigurationManager.ConnectionStrings["tallerWest"].ToString());
 
         SqlCommand oCommand;
@@ -119,36 +118,22 @@ namespace DAL
 
         public BEPermiso GuardarPermiso(BEPermiso permiso, bool esPadre)
         {
-            // 
 
-
-            //instancio un arraylist, para los parametros
             ArrayList ListaParametros = new ArrayList();
-            // MWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWM
-            // PRIMER PARAMETRO 
-            // MWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWM
 
-            //Defino lo que va a contener mi parametro 
             SqlParameter Parametro1 = new SqlParameter();
             Parametro1.ParameterName = "@permiso";
             Parametro1.Value = permiso.NombrePermiso;
             Parametro1.SqlDbType = SqlDbType.VarChar;
             ListaParametros.Add(Parametro1);
 
-            // MWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWM
-            // PRIMER PARAMETRO 
-            // MWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWM
 
-            //Defino lo que va a contener mi parametro 
             SqlParameter Parametro2 = new SqlParameter();
             Parametro2.ParameterName = "@tipopermiso";
             Parametro2.Value = esPadre;
             Parametro2.SqlDbType = SqlDbType.VarChar;
             ListaParametros.Add(Parametro2);
 
-            // MWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWM
-            // Store procedure
-            // MWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWM
             accesoDatos = new DalAccesoDatos();
             accesoDatos.EscribirBaseDatos("Sp_Permiso_Alta", ListaParametros);
 
@@ -159,7 +144,6 @@ namespace DAL
 
         public bool EscribirBaseDatos(string consultaParaBase, ArrayList ParametrosSQL)
         {
-            // Abro la conexión 
             oConexionDB.Open();
 
             SqlCommand oCommand = new SqlCommand
@@ -203,7 +187,6 @@ namespace DAL
                 oCommand = new SqlCommand("Sp_Padres_Obtener", oConexionDB);
                 oCommand.CommandType = CommandType.StoredProcedure;
 
-                // Abrir la conexión
                 oConexionDB.Open();
 
                 using (SqlDataReader reader = oCommand.ExecuteReader())
@@ -213,13 +196,10 @@ namespace DAL
 
                         BEPadre padre = new BEPadre();
 
-
-
                         padre.Id = Convert.ToInt32(reader["IdPermiso"]);
                         padre.NombrePermiso = reader["NombrePermiso"].ToString();
 
                         padres.Add(padre);
-
 
                     }
 
@@ -235,7 +215,6 @@ namespace DAL
             }
             finally
             {
-                // Cerrar la conexión
                 oConexionDB.Close();
             }
 
@@ -252,10 +231,8 @@ namespace DAL
             {
                 oCommand = new SqlCommand("Sp_Obtener_Arbol_Menu", oConexionDB);
                 oCommand.CommandType = CommandType.StoredProcedure;
-                // parametro
 
                 oCommand.Parameters.AddWithValue("@IdPadre", padre.Id);
-                // Abrir la conexión
                 if (oConexionDB.State != ConnectionState.Open)
                 {
                     oConexionDB.Open();
@@ -378,10 +355,7 @@ namespace DAL
                     // Eliminar las relaciones eliminadas de la base de datos
                     foreach (var relacionPatenteEliminada in relacionesPatentesEliminadas)
                     {
-                        // MWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWM
-                        // PRIMER PARAMETRO 
-                        // MWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWM
-                        //Defino lo que va a contener mi parametro 
+
                         SqlParameter Parametro1 = new SqlParameter();
 
                         Parametro1.ParameterName = "@IdPadre";
@@ -389,12 +363,6 @@ namespace DAL
                         Parametro1.SqlDbType = SqlDbType.VarChar;
                         ListaParametros.Add(Parametro1);
 
-
-                        // MWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWM
-                        // SEGUNDO PARAMETRO 
-                        // MWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWM
-
-                        //Defino lo que va a contener mi parametro 
                         SqlParameter Parametro2 = new SqlParameter();
                         Parametro2.ParameterName = "@IdHijo";
                         Parametro2.Value = relacionPatenteEliminada.IdHijo;
@@ -402,9 +370,6 @@ namespace DAL
                         Parametro2.SqlDbType = SqlDbType.VarChar;
                         ListaParametros.Add(Parametro2);
 
-                        // MWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWM
-                        // Store procedure
-                        // MWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWM
                         accesoDatos = new DalAccesoDatos();
                         accesoDatos.EscribirBaseDatos("Sp_Permiso_Eliminar", ListaParametros);
                         ListaParametros = new ArrayList();
@@ -416,13 +381,9 @@ namespace DAL
             if (relacionesEliminadas.Count > 0)
             {
 
-                // Eliminar las relaciones eliminadas de la base de datos
                 foreach (var relacionEliminada in relacionesEliminadas)
                 {
-                    // MWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWM
-                    // PRIMER PARAMETRO 
-                    // MWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWM
-                    //Defino lo que va a contener mi parametro 
+
                     SqlParameter Parametro1 = new SqlParameter();
 
                     Parametro1.ParameterName = "@IdPadre";
@@ -430,12 +391,6 @@ namespace DAL
                     Parametro1.SqlDbType = SqlDbType.VarChar;
                     ListaParametros.Add(Parametro1);
 
-
-                    // MWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWM
-                    // SEGUNDO PARAMETRO 
-                    // MWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWM
-
-                    //Defino lo que va a contener mi parametro 
                     SqlParameter Parametro2 = new SqlParameter();
                     Parametro2.ParameterName = "@IdHijo";
                     Parametro2.Value = relacionEliminada.IdHijo;
@@ -443,9 +398,6 @@ namespace DAL
                     Parametro2.SqlDbType = SqlDbType.VarChar;
                     ListaParametros.Add(Parametro2);
 
-                    // MWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWM
-                    // Store procedure
-                    // MWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWM
                     accesoDatos = new DalAccesoDatos();
                     accesoDatos.EscribirBaseDatos("Sp_Permiso_Eliminar", ListaParametros);
                     ListaParametros = new ArrayList();
@@ -459,10 +411,7 @@ namespace DAL
                 // Eliminar las relaciones eliminadas de la base de datos
                 foreach (var relacionAgregada in relacionesAgregadas)
                 {
-                    // MWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWM
-                    // PRIMER PARAMETRO 
-                    // MWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWM
-                    //Defino lo que va a contener mi parametro 
+                  
                     SqlParameter Parametro1 = new SqlParameter();
                     Parametro1.ParameterName = "@IdPadre";
                     Parametro1.Value = menuPadre.Id;
@@ -470,12 +419,6 @@ namespace DAL
                     Parametro1.SqlDbType = SqlDbType.VarChar;
                     ListaParametros.Add(Parametro1);
 
-
-                    // MWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWM
-                    // SEGUNDO PARAMETRO 
-                    // MWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWM
-
-                    //Defino lo que va a contener mi parametro 
                     SqlParameter Parametro2 = new SqlParameter();
                     Parametro2.ParameterName = "@IdHijo";
                     Parametro2.Value = relacionAgregada.IdPadre;
@@ -483,9 +426,6 @@ namespace DAL
                     Parametro2.SqlDbType = SqlDbType.VarChar;
                     ListaParametros.Add(Parametro2);
 
-                    // MWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWM
-                    // Store procedure
-                    // MWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWM
                     accesoDatos = new DalAccesoDatos();
                     accesoDatos.EscribirBaseDatos("Sp_Permiso_Agregar", ListaParametros);
                     ListaParametros = new ArrayList();
@@ -503,13 +443,9 @@ namespace DAL
             if (relacionesEliminadasLista.Count > 0)
             {
 
-                // Eliminar las relaciones eliminadas de la base de datos
                 foreach (var relacionEliminada in relacionesEliminadasLista)
                 {
-                    // MWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWM
-                    // PRIMER PARAMETRO 
-                    // MWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWM
-                    //Defino lo que va a contener mi parametro 
+                  
                     SqlParameter Parametro1 = new SqlParameter();
 
                     Parametro1.ParameterName = "@IdPermiso";
@@ -517,12 +453,6 @@ namespace DAL
                     Parametro1.SqlDbType = SqlDbType.VarChar;
                     ListaParametros.Add(Parametro1);
 
-
-                    // MWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWM
-                    // SEGUNDO PARAMETRO 
-                    // MWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWM
-
-                    //Defino lo que va a contener mi parametro 
                     SqlParameter Parametro2 = new SqlParameter();
                     Parametro2.ParameterName = "@userName";
                     Parametro2.Value = usuario.Username;
@@ -530,9 +460,7 @@ namespace DAL
                     Parametro2.SqlDbType = SqlDbType.VarChar;
                     ListaParametros.Add(Parametro2);
 
-                    // MWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWM
-                    // Store procedure
-                    // MWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWM
+
                     accesoDatos = new DalAccesoDatos();
                     accesoDatos.EscribirBaseDatos("Sp_Usuarios_Permiso_Eliminar", ListaParametros);
                     ListaParametros = new ArrayList();
@@ -546,10 +474,7 @@ namespace DAL
                 // Eliminar las relaciones eliminadas de la base de datos
                 foreach (var relacionAgregada in relacionesAgregadasLista)
                 {
-                    // MWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWM
-                    // PRIMER PARAMETRO 
-                    // MWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWM
-                    //Defino lo que va a contener mi parametro 
+
                     SqlParameter Parametro1 = new SqlParameter();
                     Parametro1.ParameterName = "@IdPermiso";
                     Parametro1.Value = relacionAgregada.IdPadre;
@@ -557,12 +482,6 @@ namespace DAL
                     Parametro1.SqlDbType = SqlDbType.VarChar;
                     ListaParametros.Add(Parametro1);
 
-
-                    // MWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWM
-                    // SEGUNDO PARAMETRO 
-                    // MWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWM
-
-                    //Defino lo que va a contener mi parametro 
                     SqlParameter Parametro2 = new SqlParameter();
                     Parametro2.ParameterName = "@userName";
                     Parametro2.Value = usuario.Username;
@@ -570,9 +489,7 @@ namespace DAL
                     Parametro2.SqlDbType = SqlDbType.VarChar;
                     ListaParametros.Add(Parametro2);
 
-                    // MWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWM
-                    // Store procedure
-                    // MWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWM
+                   
                     accesoDatos = new DalAccesoDatos();
                     accesoDatos.EscribirBaseDatos("Sp_Usuarios_Permiso_Agregar", ListaParametros);
                     ListaParametros = new ArrayList();
@@ -934,36 +851,11 @@ namespace DAL
             }
         }
 
-        //public void ModificarPalabra(BEPalabra palabra)
-        //{
-        //    try
-        //    {
-        //        using (SqlCommand oCommand = new SqlCommand("Sp_Palabra_Modificar", oConexionDB))
-        //        {
-        //            oCommand.CommandType = CommandType.StoredProcedure;
-        //            oCommand.Parameters.AddWithValue("@idPalabra", palabra.Id);
-        //            oCommand.Parameters.AddWithValue("@texto", palabra.Texto);
-        //            oConexionDB.Open();
-
-        //            oCommand.ExecuteNonQuery();
-        //        }
-        //    }
-        //    catch (SqlException excepcion)
-        //    {
-        //        throw excepcion;
-        //    }
-        //    finally
-        //    {
-        //        oConexionDB.Close();
-        //    }
-        //}
+       
 
         public static bool ValidarDV(string dVVCalculado)
         {
-            // MWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWM
-            // PARAMETRO 
-            // MWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWM
-            //instancio un arraylist, para los parametros
+
             ArrayList ListaParametros = new ArrayList();
             //Defino lo que va a contener mi parametro 
             SqlParameter Parametro = new SqlParameter();
@@ -972,10 +864,6 @@ namespace DAL
             Parametro.SqlDbType = SqlDbType.VarChar;
             ListaParametros.Add(Parametro);
 
-            // MWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWM
-            // Store procedure
-            // MWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWMWM
-            //instancio un objeto de la clase datos para operar con la BD
             DalAccesoDatos accesoDatos = new DalAccesoDatos();
 
             return accesoDatos.VerificarExistenciaBaseDatos("Sp_Verif_Verificar", ListaParametros);
